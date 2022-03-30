@@ -363,6 +363,7 @@ li:hover {
     max-width: 50px;
     text-align: center;
     margin: 0 auto;
+     transition: 2s;
 }
 .service-img-1 {
     max-width: 60px;
@@ -370,7 +371,10 @@ li:hover {
     margin: 0 auto;
     padding-bottom: .8em;
 }
-
+.service-img:hover,
+.service-img-1:hover {
+    transform: scale(1.3);
+}
 
 
     @media (min-width: 800px) {
