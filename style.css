@@ -137,6 +137,11 @@ header {
     max-width: 50px;
   
 }
+#flag {
+    max-width: 40px;
+    
+}
+
 
 .nav {
     position: fixed;
@@ -152,9 +157,40 @@ header {
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
+li:hover {
+    box-shadow: 0px .5px var(--clr-light);
+}
+
+
+
+/* Animation UNDERLINE */
+.section__title--animation{
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+.section__title--animation:after {
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.section__title--animation:hover:after {
+    transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+  
 @media (min-width: 700px) {
     .nav {
-        bottom: 35%;
+        bottom: 25%;
         left: 75%;
     
     }
@@ -246,6 +282,7 @@ header {
 
 .intro {
     position: relative;
+    
     padding-top: 2em;
 }
 
@@ -321,6 +358,21 @@ header {
     max-width: 500px;
     margin: 0 auto;
 }
+
+.service-img {
+    max-width: 50px;
+    text-align: center;
+    margin: 0 auto;
+}
+.service-img-1 {
+    max-width: 60px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: .8em;
+}
+
+
+
     @media (min-width: 800px) {
         .services {
             display: flex;
@@ -332,6 +384,7 @@ header {
             margin-left: 2em;                                        
      }
     }
+
 /* About Me  */
 
 .about-me {
@@ -393,12 +446,17 @@ header {
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    border-radius: 10px;
 }
+
+
 
 .portfolio__img {
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
+        border-radius: 10px;
+
 }
 .portfolio__item:focus {
     position: relative;
@@ -453,3 +511,18 @@ list-style: none;
     padding: .5em;
 }
 
+
+
+.typewriter-effect > .text {
+    max-width: 0;
+    animation: typing 3s steps(var(--characters)) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .typewriter-effect:after {
+    content: " |";
+    animation: blink 1s infinite;
+    animation-timing-function: step-end;
+  }
+  
